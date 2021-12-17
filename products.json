@@ -1,0 +1,9 @@
+{
+    "tutorials":[
+        {"sno":1,"name":"introdution","video":"video1.mp4"},
+        {"sno":2,"name":"logical","video":"video2.mp4"},
+        {"sno":3,"name":"DS","video":"video3.mp4"},
+        {"sno":4,"name":"ML","video":"video4.mp4"},
+        {"sno":5,"name":"AI","video":"video5.mp4"}
+    ]
+}
