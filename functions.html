@@ -1,0 +1,247 @@
+<!--
+    function
+    ********
+        business logic called as function
+
+        functions are used to reuse the business logic
+
+        we have following types of functions upto "ES13"
+
+        1) named functions
+
+        2) anonymous functions
+
+        3) rest parameters in functions
+
+        4) default parameters in functions
+
+        5) optional parameters in functions
+
+        6) generators
+
+        7) constructor functions
+
+        8) IIFE  (Immidiate Invokable functional Expressions)
+
+named function
+**************
+    the function with the particular name called as named function
+
+
+    Syntax
+    ++++++
+    1) function definition
+
+    2) function calling
+
+function definition
++++++++++++++++++++
+   function functionname(arg1,arg2,arg3,arg4,......argn){
+       business logic
+   }
+
+function calling
+++++++++++++++++
+   functionname(param1,param2,param3,param4,.....paramn);
+
+-->
+<!--
+<script>
+    function fun_one(){
+        return "welcome to named functions";   
+    }
+    console.log( fun_one() );                   //welcome to named functions
+</script>
+-->
+
+
+<!--
+<script>
+    function fun_one(){
+        return "welcome";
+    }
+
+    console.log( fun_one );                 //def
+</script>
+-->
+
+<!--
+<script>
+    function fun_one(arg1,arg2,arg3){
+        console.log(arg1, arg2, arg3);
+    }
+    fun_one("Angular13","NodeJS","MongoDB");                    //Angular13 NodeJS MongoDB
+    fun_one("ReactJS","NodeJS","MongoDB");                      //ReactJS NodeJS MongoDB
+    fun_one();                                                  //undefined undefined undefined
+    fun_one(undefined,"NodeJS");                                //undefined 'NodeJS' undefined
+    fun_one(null,null,null);                                    //null null null
+</script>
+-->
+
+
+<!--
+<script>
+    function fun_one(){
+        return "Hello";
+    }
+
+    function fun_two(){
+        return fun_one();
+    }
+
+    console.log( fun_two() );                           //Hello
+</script>
+-->
+
+
+<!--
+<script>
+    function fun_one(){
+        return "Hello";
+    }
+
+    function fun_two(){
+        return fun_one;
+    }
+
+    console.log( fun_two()() );                         //Hello
+</script>
+-->
+
+<!--
+<script>
+    function fun_one(arg1,arg2,arg3){
+        console.log( arg1(),arg2(),arg3() )
+    }
+
+    function fun_two(){
+        return "Hello_1";
+    }
+
+    function fun_three(){
+        return "Hello_2";
+    }
+
+    function fun_four(){
+        return "Hello_3";
+    }
+
+    fun_one( fun_two, fun_three, fun_four );            //Hello_1 Hello_2 Hello_3
+</script>
+-->
+
+<!--
+<script>
+    let arr = [];
+
+    function fun_one(){
+       return "Hello"; 
+    }
+
+    for(let i=0;i<5;i++){
+        arr.push( fun_one );   
+    }
+
+    for(let j=0;j<5;j++){
+        console.log( arr[j]() )
+    }
+
+
+</script>
+-->
+
+
+<!--
+<script>
+    var fun_one = "Hello_1";
+
+    function fun_one(){
+        return "Hello_2";
+    }
+
+    console.log( fun_one );             //Hello_1
+</script>
+-->
+
+<!--
+<script>
+    
+    function fun_one(){
+        return var_one;
+    }
+
+    console.log( fun_one() );           //undefined
+
+    var var_one = "Hello_1";
+
+    console.log( fun_one() );           //Hello_1
+
+</script>
+
+-->
+
+<script>
+    function fun_one(){
+       var var_one = "Hello_1";
+    }
+
+    console.log(var_one);           //Uncaught ReferenceError: var_one is not defined
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
