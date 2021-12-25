@@ -180,6 +180,8 @@ function calling
 
 -->
 
+
+<!--
 <script>
     function fun_one(){
        var var_one = "Hello_1";
@@ -188,6 +190,229 @@ function calling
     console.log(var_one);           //Uncaught ReferenceError: var_one is not defined
 
 </script>
+
+-->
+
+<!--
+    anonymous functions
+    *******************
+        - the function without name called as anonymous function
+
+        - anonymous functions also called as "arrow" functions/"lamda" functions/"callback" functions
+
+        - we will represent arrow functions with "=>"
+
+        - "=>" introduced in ES6
+
+Syntax:
+******
+    1) function definition
+
+    2) function calling
+
+    function definition
+    *******************
+    var/let/const variablename = (arg1,arg2,arg3,....argn)=>{
+        //business logic
+    }
+
+    function calling
+    ****************
+    variablename(param1,param2,param3,.....paramn);
+-->
+
+
+<!--
+<script>
+    let fun_one = ()=>{
+        return "welcome to arrow functions";
+    }
+
+    console.log( fun_one() );                       //welcome to arrow functions
+</script>
+-->
+
+<!--
+<script>
+    let fun_one = ()=>"hello";
+    console.log( fun_one() );                   //hello
+</script>
+-->
+
+
+<!--
+<script>
+    let fun_one = (arg1,arg2,arg3)=>{
+        console.log(arg1,arg2,arg3);
+    }
+    fun_one("Angular13","NodeJS","MongoDB");                //Angular13 NodeJS MongoDB
+    fun_one("ReactJS","NodeJS","MongoDB");                  //Angular13 NodeJS MongoDB
+    fun_one("VueJS","NodeJS","MongoDB");                    //VueJS NodeJS MongoDB
+    fun_one();                                              //undefined undefined undefined
+    fun_one(undefined,"Hello_2");                           //undefined undefined undefined
+    fun_one(null,null,null);                                //null null null
+</script>
+-->
+
+
+<!--
+<script>
+    let fun_one = ()=>{
+        return "Hello";
+    };
+
+    console.log( fun_one );     //def
+</script>
+-->
+
+
+<!--
+<script>
+   let fun_one = ()=>{
+        return ()=>{
+            return "Hello";   
+        }
+   };
+   console.log( fun_one()() );              //Hello
+</script>
+-->
+
+
+<!--
+<script>
+    let fun_one = (arg1,arg2,arg3)=>{
+        console.log( arg1(), arg2(), arg3() );
+    };
+    fun_one( ()=>{
+        return "Hello_1";
+    }, ()=>{
+        return "Hello_2";
+    }, ()=>{
+        return "Hello_3";
+    } );                //Hello_1 Hello_2 Hello_3
+</script>
+-->
+
+
+<!-- 
+    default parameters in functions 
+    *******************************
+        while defining the functions, we will initilize arguments with default values
+
+        this concept introduced in ES6
+-->
+
+
+<!--
+<script>
+     function fun_one(arg1="Hello_1",arg2="Hello_2",arg3="Hello_3"){
+        console.log( arg1, arg2, arg3 );
+     }
+
+     fun_one();                                                 //Hello_1 Hello_2 Hello_3
+     fun_one("H_1","H_2","H_3");                                //H_1 H_2 H_3
+     fun_one("Welcome_1","Welcome_2","Welcome_3","Welcome_4");  //Welcome_1 Welcome_2 Welcome_3
+     fun_one(undefined,undefined,undefined);                    //Hello_1 Hello_2 Hello_3
+     fun_one(null,null,null);                                   //null null null
+     fun_one(undefined,undefined,"H_3");                        //Hello_1 Hello_2 H_3
+</script>
+-->
+
+
+<!--
+<script>
+    function fun_one(arg1,arg2="hello_2"){
+        console.log( arg1, arg2 );
+    }
+
+    //fun_one();                         //undefined 'hello_2'
+    //fun_one("hello_1");                  //hello_1 hello_2
+    //fun_one(undefined,undefined);       //undefined 'hello_2'
+    fun_one(null,null);                   //null null
+
+</script>
+-->
+
+<!--
+    rest parameters in functions
+    ****************************
+        by using rest parameter, we can hold/store more than one value
+
+        ES6
+
+        we will represent rest parameter with "..." operator
+
+        "..." operator called as spread operator
+
+        we can have only "one" spread operator per function
+
+        position of spread operator should be last in occurances
+-->
+
+
+<!--
+<script>
+    function fun_one(...arg1){
+        console.log( arg1 );
+    }
+    fun_one();                                      //[]
+    fun_one("Hello_1");                             //['Hello_1']
+    fun_one("Hello_1","Hello_2");                   //['Hello_1', 'Hello_2']
+    fun_one("Hello_1","Hello_2","Hello_3");         //['Hello_1', 'Hello_2', 'Hello_3']
+    fun_one(undefined);                             //[undefined]
+    fun_one(undefined,null);                        //[undefined, null]
+</script>
+-->
+
+<!--
+<script>
+    function fun_one(...arg1,...arg2){
+
+    };
+    //Uncaught SyntaxError: Rest parameter must be last formal parameter
+</script>
+-->
+
+<!--
+<script>
+    function fun_one(...arg1,arg2){}
+    //Uncaught SyntaxError: Rest parameter must be last formal parameter
+</script>
+-->
+
+<script>
+    function fun_one(arg1,arg2="Hello_2",...arg3){
+        console.log(arg1,arg2,arg3);
+    }
+    fun_one();                                      //undefined 'Hello_2' []
+    fun_one("Hello_1",undefined,"Hello_3");         //Hello_1 Hello_2 ['Hello_3']
+    fun_one(undefined,undefined,undefined);         //undefined 'Hello_2' [undefined]
+    fun_one(null,null,null);                        //null null [null]
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
