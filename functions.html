@@ -509,7 +509,7 @@ Syntax:
 </script>
 -->
 
-
+<!--
 <script>
     function class_one(){
 
@@ -527,6 +527,166 @@ Syntax:
     console.log( obj.var_one, obj.var_two );
     //Hello_1 Hello_2
 </script>
+-->
+
+<!--
+<script>
+    function Parent(){
+
+    };
+    Parent.prototype.fun_one = function(){
+        return "Parent";
+    }
+
+    function Child(){
+
+    }
+    Child.prototype = Object.create(Parent.prototype);
+    Child.prototype.fun_two = function(){
+        return "Child";
+    }
+
+    function Subchild(){
+
+    }
+    Subchild.prototype = Object.create(Child.prototype);
+    Subchild.prototype.fun_three = function(){
+        return "Subchild";
+    }
+
+    let obj = new Subchild();
+    console.log( obj.fun_one(), obj.fun_two(), obj.fun_three() );
+
+    //Parent Child Subchild
+</script>
+-->
+
+
+<!--
+    IIFE
+    ****
+        Immidiate Invokable Functional Expression
+
+        ES9
+
+        when ever we create the functions, automatically it will be invoked
+
+        Syntax
+        ******
+        ((arg1,arg2,arg3,....argn)=>{
+            business logic
+        })(param1,param3,param3,....paramn);
+
+-->
+
+
+<!--
+<script>
+    (()=>{
+        console.log("IIFE");
+    })()
+    //IIFE
+</script>
+-->
+
+
+<!--
+<script>
+    ((arg1,arg2,arg3)=>{
+        console.log(arg1,arg2,arg3);
+    })("Hello_1","Hello_2","Hello_3")
+    //Hello_1 Hello_2 Hello_3
+</script>
+-->
+
+<!--
+<script>
+    let x = (()=>{
+        return "hello";
+    })()
+    console.log(x);                 //hello
+</script>
+-->
+
+<!--
+<script>
+    ((arg1,arg2,arg3)=>{
+        console.log(arg1, arg2, arg3);
+    })(
+        (()=>{
+            return "hello_1";
+        })(),
+        (()=>{
+            return "hello_2";
+        })(),
+        (()=>{
+            return "hello_3";
+        })()
+    );
+    //hello_1 hello_2 hello_3
+</script>
+-->
+
+<!--
+<script>
+    setTimeout(()=>{
+        console.log("Hello");
+    },5000);
+</script>
+-->
+
+
+<script>
+    for(var i=0;i<5;i++){
+        ((i)=>{
+            setTimeout(()=>{
+                console.log(i);
+            },5000)
+        })(i);
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
