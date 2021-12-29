@@ -636,6 +636,7 @@ Syntax:
 -->
 
 
+<!--
 <script>
     for(var i=0;i<5;i++){
         ((i)=>{
@@ -645,6 +646,173 @@ Syntax:
         })(i);
     }
 </script>
+-->
+
+
+
+<!--
+    Generators
+    **********
+        - Generators "controls" the "flow" of execution
+
+        - Generator functions prefix with "*"
+
+        - all the statements in functions prefix with "yield" keyword
+
+        - ES9
+
+        - Generators returns "cursor" mechanism
+
+        - through "cursor", we will control "flow" of execution
+-->
+
+
+<!--
+<script>
+    function *fun_one(){
+        yield "hello_1";
+        yield "hello_2";
+        yield "hello_3";
+        yield "hello_4";
+        yield "hello_5";
+    }
+
+    let cursor = fun_one();
+    console.log( cursor.next() );
+    console.log( cursor.next() );
+    console.log( cursor.next() );
+    console.log( cursor.next() );
+    console.log( cursor.next() );
+    console.log( cursor.next() );
+</script>
+-->
+
+
+
+<!--
+<script>
+    function *fun_one(){
+        yield "Hello_1";
+    }
+
+    function *fun_two(){
+        yield "Hello_2";
+    }
+
+    function *main(){
+        yield *fun_one();
+        yield *fun_two();
+        yield "Hello_3";
+    }
+
+    let cursor = main();
+    for(let i=0;i<3;i++){
+        console.log( cursor.next() );
+    }
+</script>
+-->
+
+
+<!--
+    optional parameters in functions
+    ********************************
+        - while calling the functions, we can make few parameters are optional
+
+        - ES6
+
+        - we can represent optional parameters with "?"
+
+        - optional parameters won't work in "javascript" environment
+
+        - optional parameters will work in typescript environment
+
+        - typescript is the programming language
+
+        - typescript relesed by microsoft
+
+        - typescript follows the OOPS
+
+        - extension of typescript files ".ts"
+
+        - browsers can't understand typescript
+
+        - so, we need to convert typescript to equalent javascript
+
+        - conversion from typescript to equalent javascript called as transpilation
+
+        - "tsc" is the tool, used to perform the transpilation
+
+        - "tsc" stands for typescript compiler
+
+        installation
+        ************
+            typescript installation is command based installation
+
+            > npm install -g typescript
+
+            npm stands for node packaging manager
+
+            npm available in nodejs
+
+            -g stands for global installation
+
+
+--> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
