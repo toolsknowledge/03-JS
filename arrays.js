@@ -148,6 +148,7 @@ console.log( [...x,...y] );
 */
 
 
+/*
 //findIndex()
 let arr = [10,20,30,40,50,60];
 console.log(
@@ -192,6 +193,194 @@ arr1.splice(arr1.findIndex((element,index)=>{
     return element.cost == "300 $";
 }),1);
 console.log( arr1 );
+*/
+
+
+/*
+    //map()
+    console.log(
+        [1,2,3,4,5].map((element,index)=>{
+            return element*100;   
+        })
+    );
+    //[ 100, 200, 300, 400, 500 ]
+
+    console.log(
+        [1,2,3,4,5].map(element=>element*10)
+    );
+    //[ 10, 20, 30, 40, 50 ]
+*/
+
+
+/*
+    //filter()
+    console.log(
+        [1,2,3,4,5].filter((element,index)=>{
+            return element>=3;
+        })
+    );
+    //[ 3, 4, 5 ]
+
+    console.log(
+        [1,2,3,4,5].map((element,index)=>{
+            return element*100;
+        }).filter((element,index)=>{
+            return element>=600;
+        })
+    );
+*/
+
+
+/*
+console.log(
+    [1,2,3,4,5].reduce((firstElement,nextElement)=>{
+        return firstElement+nextElement;
+    })
+);
+//15
+
+
+console.log(
+    [1,2,3,4,5].reduce((firstElement,nextElement)=>{
+        return firstElement+nextElement;
+    },100)
+);
+//115
+
+
+
+console.log(
+    [1,2,3,4,5].map((element,index)=>{
+        return element*100;
+    }).filter((element,index)=>{
+        return element>=300;
+    }).reduce((firstElement,nextElement)=>{
+        return firstElement+nextElement;
+    })
+);
+
+//1200
+*/
+
+
+/*
+//reduceRight()
+console.log(
+    ["ES11","To","Welcome"].reduceRight((firstElement,nextElement)=>{
+        return firstElement+" "+nextElement;      
+    })
+);
+//Welcome To ES11
+*/
+
+
+
+/*
+console.log(
+    [1,[2],[3],[4]].flat(1)
+);
+
+//[ 1, 2, 3, 4 ]
+
+console.log(
+    [[[[1]]],[[[[[[[2]]]]]]],[[[[[[[[[[[[[[[3]]]]]]]]]]]]]]]].flat(Infinity)
+);
+
+//[ 1, 2, 3 ]
+*/
+
+
+
+/*
+let arr1 = [1,2,3];
+let arr2 = ["one","two","three"]
+//[[1,"one"],[2,"two"],[3,"three"]]
+//[1,"one",2,"two",3,"three"]
+
+console.log(
+    arr1.flatMap((element,index)=>{
+        return [ element,arr2[index] ]
+    })
+);
+//[ 1, 'one', 2, 'two', 3, 'three' ]
+*/
+
+
+let arr1 = [1,2,3,1,2,3];
+// arr1.forEach((element,index)=>{
+//     console.log( arr1.indexOf(element) );
+// })
+
+console.log(
+    arr1.filter((element,index)=>{
+        return arr1.indexOf(element) === index;
+    })
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
