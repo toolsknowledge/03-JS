@@ -306,6 +306,8 @@ console.log(
 */
 
 
+
+/*
 let arr1 = [1,2,3,1,2,3];
 // arr1.forEach((element,index)=>{
 //     console.log( arr1.indexOf(element) );
@@ -316,6 +318,205 @@ console.log(
         return arr1.indexOf(element) === index;
     })
 );
+*/
+
+
+/*
+    //sort()
+    //ascending / descending
+    console.log(
+        [1,5,2,4,3].sort((arg1,arg2)=>{
+            return arg1-arg2;
+        })
+    );
+
+    //[ 1, 2, 3, 4, 5 ]
+
+
+    console.log(
+        [5,1,2,4,3].sort((arg1,arg2)=>{
+            return arg2-arg1;
+        })
+    );
+    //[ 5, 4, 3, 2, 1 ]
+
+
+    console.log(
+        [1,5,2,4,3].sort((arg1,arg2)=>{
+            return arg1-arg2
+        })[1]
+    );          //2
+
+
+    console.log(
+        [1,5,2,4,3].sort((arg1,arg2)=>{
+            return arg2-arg1;
+        })[1]
+    );          //4 
+*/
+
+
+
+
+/*
+
+//reverse()
+//used to reverse the array elements
+console.log(
+    [1,2,3,4,5].reverse()
+);
+//[ 5, 4, 3, 2, 1 ]
+
+
+console.log(
+    Array.from("Hello").reverse().toString().replaceAll(",","")
+);
+
+//[ 'H', 'e', 'l', 'l', 'o' ]
+//[ 'o', 'l', 'l', 'e', 'H' ]
+//o,l,l,e,H
+//ol,l,e,H
+//olleH
+
+
+let arr = ["Angular","React","NodeJS","VueJS"];
+//Res 1: ["VueJS","NodeJS","React","Angular"]
+//Res 2: ["ralugnA","tcaeR","SJedoN","SJeuV"]
+//Res 3: ["SJeuV","SJedoN","tcaeR","ralugnA"]
+
+*/
+
+
+
+console.log(
+    "welcome to fullstack ui".substr(0,7)
+);
+
+//welcome
+
+
+
+console.log(
+    "welcome to fullstack ui".substr(1,2)
+);
+
+//el
+
+console.log(
+    "welcome to fullstack ui".substr(-2,2)
+);
+
+//ui
+
+
+
+console.log(
+    "welcome to es6".substring(0,7)
+);
+//welcome
+
+
+console.log(
+    "welcome to es6".substring(8,10)
+);
+
+
+
+console.log(
+    "welcome to es6".substring(11)
+);          //es6
+
+
+
+
+//forEach()
+["Hello_1","Hello_2"].forEach((element,index)=>{
+    console.log(element);
+});
+
+
+for(let element of ["Hello_1","Hello_2"]){
+    console.log(element);
+}
+
+
+let obj = {
+    "key1":"Hello_1",
+    "key2":"Hello_2",
+    "key3":"Hello_3"
+};
+
+for(let key in obj){
+    console.log( obj[key] );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
