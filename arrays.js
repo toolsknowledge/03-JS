@@ -387,7 +387,7 @@ let arr = ["Angular","React","NodeJS","VueJS"];
 */
 
 
-
+/*
 console.log(
     "welcome to fullstack ui".substr(0,7)
 );
@@ -449,12 +449,105 @@ let obj = {
 for(let key in obj){
     console.log( obj[key] );
 }
+*/
+
+
+/*
+let arr1 = [10,20,30,40,50,60,70,80,90,100];
+arr1.copyWithin(2);
+console.log(arr1);          //[10,20,10,20,30,40,50,60,70,80]
+
+
+let arr2 = [10,20,30,40,50,60,70,80,90,100];
+arr2.copyWithin(5);
+console.log(arr2);  //[10,20,30,40,50,10,20,30,40,50]
+
+
+let arr3 = [10,20,30,40,50,60,70,80,90,100]
+arr3.copyWithin(8);
+console.log(arr3);    //[10,20,30,40,50,60,70,80,10,20]
+
+
+let arr4 = [10,20,30,40,50,60,70,80,90,100];
+arr4.copyWithin(2,4);
+console.log(arr4);          //[10,20,50,60,70,80,90,100,90,100]
+
+
+let arr5 = [10,20,30,40,50,60,70,80,90,100];
+arr5.copyWithin(3,6);
+console.log(arr5);    //[10,20,30,70,80,90,100,80,90,100]
+
+
+let arr6 = [10,20,30,40,50,60,70,80,90,100];
+arr6.copyWithin(2,4,7);
+console.log(arr6);      //[10,20,50,60,70,60,70,80,90,100]
+
+
+let arr7 = [10,20,30,40,50,60,70,80,90,100];
+arr7.copyWithin(1,5,8);
+console.log(arr7);          //[10,60,70,80,50,60,70,80,90,100]
+*/
 
 
 
+/*
+let arr = [10,20,30,40,50];
+let arr1 = arr.fill(100);                    
+console.log(arr1);                      //[ 100, 100, 100, 100, 100 ]
+
+let arr2 = arr1.fill(200,1);
+console.log(arr2);                      //[ 100, 200, 200, 200, 200 ]
+
+let arr3 = arr2.fill(300,2);
+console.log( arr3 );                    //[ 100, 200, 300, 300, 300 ]
+
+let arr4 = arr3.fill(400,3,4);
+console.log(arr4);                      //[ 100, 200, 300, 400, 300 ]
+
+let arr5 = arr4.fill(500,4);
+console.log(arr5);                      //[ 100, 200, 300, 400, 500 ]
+*/
+
+
+//some()
+console.log(
+    [10,20,30,40,50].some((element,index)=>{
+        return element>=50;
+    })
+);
+//true
+
+
+//every()
+console.log(
+    [1,2,3,4,5].every((element,index)=>{
+        return element>=1;
+    })
+);  
+//true
+
+
+//includes()
+console.log(
+    ["hello_1","hello_2"].includes("hello_1")
+);
+
+//true
+
+console.log(
+    ["hello_1","hello_2"].includes("hello")
+);
+
+//false
 
 
 
+//find()
+console.log(
+    [1,2,3,4,5].find((element,index)=>{
+        return element==10;
+    })
+);
 
 
 
