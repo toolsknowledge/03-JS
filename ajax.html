@@ -1,0 +1,92 @@
+<!--
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <script>
+            $.ajax({
+                method :"GET",
+                url : "https://www.w3schools.com/angular/customers.php",
+                success : (posRes)=>{
+                    console.log(posRes);
+                },
+                error : (errRes)=>{
+                    console.log(errRes);
+                }  
+            })
+        </script>
+    </body>
+</html>
+-->
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <p id="my_paragraph"></p>
+
+        <!-- <script>
+            $.ajax({
+                method : "GET",
+                url : " http://localhost:3000/employees",
+                success : (posRes)=>{
+                    document.getElementById("my_paragraph").innerHTML = JSON.stringify(posRes);
+                },
+                error : (errRes)=>{
+
+                }
+            })
+        </script> -->
+
+        <script>
+            $.ajax({
+                method : "POST",
+                url : "http://localhost:3000/employees",
+                data : {"id":3,"name":"e_three","sal":30000},
+                success : (posRes)=>{
+                    console.log(posRes);
+                },
+                error : (errRes)=>{
+                    console.log(errRes);
+                }
+            })
+        </script>
+
+
+
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
