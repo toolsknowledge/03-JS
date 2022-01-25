@@ -143,6 +143,8 @@
 </script>
 -->
 
+
+<!--
 <script>
     let promise1 = new Promise((resolve,reject)=>{
         setTimeout(()=>{
@@ -174,12 +176,111 @@
             console.log(errRes);
         });
 
-
-
-
-
-
 </script>
+-->
+
+<!--
+<script>
+   let promise1 = new Promise((resolve,reject)=>{
+        resolve("Hello");
+   });
+
+   async function fun_one(){
+        const res = await promise1;
+        console.log(res);
+   }
+
+   fun_one();                   //Hello
+</script>
+-->
+
+<script>
+    function add(num){
+        return new Promise((resolve,reject)=>{
+            resolve(num+5);
+        })
+    }
+
+    function sub(num){
+        return new Promise((resolve,reject)=>{
+            resolve(num-3);
+        })
+    }
+
+    function mul(num){
+        return new Promise((resolve,reject)=>{
+            resolve(num*2);
+        })
+    }
+
+    function div(num){
+        return new Promise((resolve,reject)=>{
+            resolve((num/2)-2);
+        })
+    }
+
+    async function consume(){
+        const addRes = await add(5);
+        const subRes = await sub(addRes);
+        const mulRes = await mul(subRes);
+        const divRes = await div(mulRes);
+        console.log( "Add....",addRes, "Sub....",subRes, "Mul....",mulRes, "Div....",divRes);
+    }
+
+    consume();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
