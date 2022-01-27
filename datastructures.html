@@ -88,6 +88,8 @@
 </script>
 -->
 
+
+<!--
 <script>
     let map = new Map();
     map.set("key1","Hello_1")
@@ -106,6 +108,327 @@
     console.log(map);
 
 </script>
+-->
+
+
+<!--
+<script>
+    let map = new Map();
+    map.set("key1","Hello_1")
+       .set("key2","Hello_2")
+       .set("key3","Hello_3")
+       .set("key4","Hello_4")
+       .set("key5","Hello_5");
+    console.log(map);
+    console.log( map.has("key1") );                     //true
+    map.delete("key1");
+    console.log(map);
+    console.log( map.has("key1") );                     //false
+    console.log( map.get("key2") );                     //Hello_2
+
+    for(let [k,v] of map){
+       console.log(k,v); 
+    }
+
+    map.clear();
+    console.log(map);
+    console.log(map.size);                                  //0
+
+</script>
+-->
+
+
+<!--
+<script>
+    //WeakMap allows only json objects as keys
+    let weakMap = new WeakMap();
+    console.dir(weakMap);
+
+    //delete()
+    //get()
+    //has()
+    //set()
+</script>
+-->
+
+<!--
+<script>
+    let weakMap = new WeakMap();
+    weakMap.set("key1","Hello_1");              //Uncaught TypeError: Invalid value used as weak map key
+</script>
+-->
+
+
+<!--
+<script>
+    let weakMap = new WeakMap();
+    let key1 = {};
+    let value1 = "Hello_1";
+
+    let key2 = {};
+    let value2 = "Hello_2";
+
+    weakMap.set(key1,value1)
+           .set(key2,value2);
+    console.log(weakMap);
+</script>
+-->
+
+
+<!--
+<script>
+    //Set
+    //Set data structure won't allows the duplicate values
+    let set = new Set();
+    console.dir(set);
+
+    //add()
+    //clear()
+    //delete()
+    //entries() , forEach(),   for...of()
+    //has()
+    //keys()
+    //size
+    //values()
+</script>
+-->
+
+
+<!--
+<script>
+    let set = new Set();
+    set.add(10).add(20).add(30).add(10).add(20).add(30);
+    console.log(set);                   //{10, 20, 30}
+    console.log([...set]);              //[10, 20, 30]
+</script>
+-->
+
+
+<!--
+<script>
+    console.log([...new Set(["hello_1","hello_2","hello_3","hello_1","hello_2","hello_3"])]);   //['hello_1', 'hello_2', 'hello_3']
+</script>
+-->
+
+<!--
+<script>
+    let set = new Set();
+
+    let data1 = "Hello_1";
+    let data2 = "Hello_2";
+
+    set.add(data1).add(data2);
+    console.log(set);                       //{'Hello_1', 'Hello_2'}
+
+    console.log( set.has(data1) );          //true
+
+    console.log( set.keys() );              //{'Hello_1', 'Hello_2'}
+
+    console.log( set.values() );            //{'Hello_1', 'Hello_2'}
+
+    console.log( set.size );                //2
+
+    for(let x of set){
+        console.log(x);
+    }
+
+    set.clear();
+    console.log(set);
+
+
+</script>
+-->
+
+
+<!--
+<script>
+    let set = new Set();
+    set.add("Hello")
+       .add(100)
+       .add(true)
+       .add(100n)
+       .add(Symbol("Hello"))
+       .add(undefined)
+       .add(null)
+       .add(undefined)
+       .add(null)
+       .add("Hello")
+       .add(100);
+    console.log(set);
+</script>
+-->
+
+<!--
+<script>
+    //WeakSet will allow only json data
+    let weakSet = new WeakSet();
+    console.dir(weakSet);
+
+    //add()
+    //delete()
+    //has()
+    
+</script>
+-->
+
+
+<!--
+<script>
+    let weakSet = new WeakSet();
+    weakSet.add("Hello");                   //Uncaught TypeError: Invalid value used in weak set
+</script>
+-->
+
+<script>
+    let weakSet = new WeakSet();
+
+    let key1 = {"key":"value"};
+    let key2 = {"key":"value"};
+
+    weakSet.add(key1)
+           .add(key2);
+    console.log(weakSet);
+
+    console.log( weakSet.has(key1) );
+    
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
