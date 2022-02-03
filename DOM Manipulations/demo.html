@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Manipulations</title>
+    </head>
+    <body>
+        <!-- <p id="my_paragraph"></p> -->
+
+        <!--<input type="text" id="uname">  <br><br>
+        <input type="password" id="upwd"> <br><br>
+        <button onclick="myFun()">Login</button>
+        <p id="status"></p>-->
+
+        <!-- <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p> -->
+
+
+        <!-- <p class="c_1"></p>
+        <p class="c_1"></p>
+        <p class="c_1"></p>
+        <p class="c_1"></p>
+        <p class="c_1"></p> -->
+
+
+        <!-- <p>Paragraph 1</p>
+        <p>Paragraph 2</p>
+        <p>Paragraph 3</p>
+        <div>Division 1</div>
+        <div>Division 2</div>
+        <p>Paragraph 4</p>
+        <div>Division 3</div> -->
+
+
+        <!-- <button>ClickMe</button> -->
+
+
+        <!-- <div></div> -->
+
+        <div>
+            
+            <strong>Hello,Welcome to element</strong>
+        </div>
+
+
+
+
+    </body>
+    <script>
+        // document.getElementById("my_paragraph").innerHTML = "Vega";
+    
+    //    function myFun(){
+    //        if( document.getElementById("uname").value === "ashokit" &&   document.getElementById("upwd").value === "ashokit123"){
+    //             document.getElementById("status").innerHTML = "Success";
+    //        }else{
+    //            document.getElementById("status").innerHTML = "Fail";
+    //        }
+    //    }
+    
+    
+        // document.getElementsByTagName("p")[0].innerHTML = "Hello_1";
+        // document.getElementsByTagName("p")[1].innerHTML = "Hello_2";
+        // document.getElementsByTagName("p")[2].innerHTML = "Hello_3";
+        // document.getElementsByTagName("p")[3].innerHTML = "Hello_4";
+        // document.getElementsByTagName("p")[4].innerHTML = "Hello_5";
+
+        // let allParagraphs = document.getElementsByTagName("p");
+        // for(let p of allParagraphs){
+        //     p.innerHTML = "Welcome";
+        // }
+
+        // let allParagraphs = document.getElementsByClassName("c_1");
+        // for(let p of allParagraphs){
+        //     p.innerHTML = "Hello";
+        // }
+
+        
+        // let firstParagraph = document.querySelector("p");
+        // firstParagraph.style.color = "red";
+
+
+        // let allParagraphs = document.querySelectorAll("p");
+        // for(let p of allParagraphs){
+        //     p.style.color = "yellow";
+        // }
+
+
+        // let firstDiv = document.querySelector("div");
+        // firstDiv.style.color = "green";
+
+
+        // let allDivisions = document.querySelectorAll("div");
+        // for(let div of allDivisions){
+        //     div.style.backgroundColor = "green";
+        // }
+
+            
+        // let btn = document.querySelector("button");
+        // btn.onclick = myFun;
+        // function myFun(){
+        //     console.log("Hello");
+        // }
+
+
+        // let btn = document.querySelector("button");
+        // btn.addEventListener("click",myFun);
+        // function myFun(){
+        //     console.log("welcome");
+        // }
+
+
+        // let btn = document.querySelector("button");
+        // btn.removeEventListener("click",myFun);
+
+
+
+        // let div = document.querySelector("div");
+        // div.setAttribute("uname","Hello");
+        // console.log( div.getAttribute("uname") );
+        // div.removeAttribute("uname");
+
+
+        // let h1 = document.createElement("h1");
+        // h1.textContent = "Data Added Dynamically !";
+        // let div = document.querySelector("div");
+        // let strong = document.querySelector("strong");
+        // div.replaceChild(h1,strong);
+
+        // let em = document.createElement("em");
+        // em.textContent = "Emphasized Text";
+        // div.replaceChild(em,h1);
+
+
+            // let strong = document.querySelector("strong");
+            // let strong1 = strong.cloneNode(true);
+            // let div = document.querySelector("div");
+            // div.appendChild(strong1);
+
+
+            let p = document.createElement("p");
+            p.textContent = "Hello";
+
+            let div = document.querySelector("div");
+            let strong = document.querySelector("strong");
+            div.insertBefore(p,strong);
+
+
+    </script>
+</html>
+
+
+
+
+
+
+
+
