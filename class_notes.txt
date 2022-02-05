@@ -81,6 +81,10 @@ datatypes
 
 
 
+//Classes
+//Event Bubbling and Event Capturing
+//Try & Catch Block
+//Regular Expressions (Validations)
 
 
 
