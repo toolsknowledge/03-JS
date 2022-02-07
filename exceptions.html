@@ -1,0 +1,77 @@
+<!--
+    try....catch
+    *************
+
+    - used to handle the "exceptions"
+
+    - "try" block used to place the "risk" code
+
+    - error handling code we should place in "catch" block
+-->
+
+
+<!--
+<script>
+    try{
+        aleeeeert("hello");
+    }catch(err){
+        console.log(err.message);
+        console.log("hello"); 
+    }
+</script>
+-->
+
+
+<input type="text" id="demo" min="5" max="10">
+<button onclick="myFunction()">Click Me</button>
+<p id="my_paragraph"></p>
+
+<script>
+    function myFunction(){
+        const message = document.getElementById("my_paragraph");
+        message.innerHTML = "";
+        try{
+            let x = document.getElementById("demo").value;
+           
+            if(x == "") throw "Empty";
+            if(isNaN(x)) throw "Not a Number";
+            x = Number(x);
+            console.log(x);
+            if(x<5) throw "less than 5 ";
+            if(x>10) throw "more than 10 ";
+           
+        }catch(err){
+            message.innerHTML = err;
+        }finally{
+            message.innerHTML = "i am a final block";
+        }
+
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
